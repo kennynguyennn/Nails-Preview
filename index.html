@@ -113,6 +113,49 @@
 
         footer { background: var(--deep-black); color: rgba(255,255,255,0.6); padding: 80px 10%; text-align: center; }
         .footer-logo { height: 80px; margin-bottom: 30px; }
+    /* MOBILE RESPONSIVENESS FIX */
+@media (max-width: 768px) {
+    /* Stack the Hero Section */
+    .hero {
+        flex-direction: column !important;
+        height: auto !important;
+        padding-top: 100px !important;
+    }
+
+    /* Make the text full width on mobile */
+    .hero > div {
+        flex: none !important;
+        width: 100% !important;
+        padding: 40px 10% !important;
+        text-align: center;
+    }
+
+    /* Make the Hero Heading smaller for phones */
+    .hero h1 {
+        font-size: 3rem !important;
+    }
+
+    /* Make the Image sit below the text on mobile */
+    .hero div:last-child {
+        height: 400px !important;
+    }
+
+    /* Stack the Service Menu and Hours */
+    .menu-grid, .booking-area, footer {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+    }
+
+    /* Make the Gallery 2 columns on mobile instead of 4 */
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr !important;
+        height: auto !important;
+    }
+
+    .gallery-item {
+        height: 250px !important;
+    }
+}
     </style>
 </head>
 <body>
